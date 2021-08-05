@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { DatePicker } from '@material-ui/pickers';
 
+const monthsToDisable = [1,3,5,7]
+
 function YearMonthPicker() {
   const [selectedDate, handleDateChange] = useState(new Date());
 
@@ -14,11 +16,13 @@ function YearMonthPicker() {
       />
 
       <DatePicker
+        variant="inline"
         views={['year', 'month']}
         label="Year and Month"
         helperText="With min and max"
         minDate={new Date('2018-03-01')}
-        maxDate={new Date('2018-06-01')}
+        maxDate={new Date('2022-06-01')}
+        shouldDisableMonth={(date) => monthsToDisable.includes(date.getMonth())}
         value={selectedDate}
         onChange={handleDateChange}
       />
@@ -29,6 +33,7 @@ function YearMonthPicker() {
         views={['year', 'month']}
         label="Year and Month"
         helperText="Start from year selection"
+        shouldDisableMonth={(date) => monthsToDisable.includes(date.getMonth())}
         value={selectedDate}
         onChange={handleDateChange}
       />

@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { DatePicker, KeyboardDatePicker } from '@material-ui/pickers';
 
+const monthsToDisable = [1,3,5,7]
+
 function InlineDatePickerDemo(props) {
   const [selectedDate, handleDateChange] = useState(new Date());
 
@@ -18,6 +20,7 @@ function InlineDatePickerDemo(props) {
         variant="inline"
         label="Only calendar"
         helperText="No year selection"
+        shouldDisableMonth={(date) => monthsToDisable.includes(date.getMonth())}
         value={selectedDate}
         onChange={handleDateChange}
       />
