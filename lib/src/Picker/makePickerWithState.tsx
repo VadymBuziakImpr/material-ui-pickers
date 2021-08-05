@@ -72,6 +72,7 @@ export function makePickerWithState<T extends any>({
       rightArrowButtonProps,
       rightArrowIcon,
       shouldDisableDate,
+      shouldDisableMonth,
       strictCompareDates,
       timeIcon,
       ToolbarComponent = DefaultToolbarComponent,
@@ -119,6 +120,7 @@ export function makePickerWithState<T extends any>({
           rightArrowButtonProps={rightArrowButtonProps}
           rightArrowIcon={rightArrowIcon}
           shouldDisableDate={shouldDisableDate}
+          shouldDisableMonth={shouldDisableMonth}
           strictCompareDates={strictCompareDates}
           timeIcon={timeIcon}
           ToolbarComponent={ToolbarComponent}
