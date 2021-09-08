@@ -577,6 +577,19 @@
         "name": "(date: DateIOType) => void"
       }
     },
+    "shouldDisableMonth": {
+      "defaultValue": null,
+      "description": "Disable specific months dynamically.",
+      "name": "shouldDisableMonth",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
+        "name": "BaseDatePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(date: any) => boolean"
+      }
+    },
     "leftArrowIcon": {
       "defaultValue": null,
       "description": "Left arrow icon",
@@ -1276,6 +1289,19 @@
       "required": false,
       "type": {
         "name": "(date: DateIOType) => void"
+      }
+    },
+    "shouldDisableMonth": {
+      "defaultValue": null,
+      "description": "Disable specific months dynamically.",
+      "name": "shouldDisableMonth",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
+        "name": "BaseDatePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(date: any) => boolean"
       }
     },
     "leftArrowIcon": {
@@ -2850,6 +2876,19 @@
         "name": "(date: DateIOType) => void"
       }
     },
+    "shouldDisableMonth": {
+      "defaultValue": null,
+      "description": "Disable specific months dynamically.",
+      "name": "shouldDisableMonth",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
+        "name": "BaseDatePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(date: any) => boolean"
+      }
+    },
     "leftArrowIcon": {
       "defaultValue": null,
       "description": "Left arrow icon",
@@ -3618,6 +3657,19 @@
       "required": false,
       "type": {
         "name": "(date: DateIOType) => void"
+      }
+    },
+    "shouldDisableMonth": {
+      "defaultValue": null,
+      "description": "Disable specific months dynamically.",
+      "name": "shouldDisableMonth",
+      "parent": {
+        "fileName": "material-ui-pickers/lib/src/DatePicker/DatePicker.tsx",
+        "name": "BaseDatePickerProps"
+      },
+      "required": false,
+      "type": {
+        "name": "(date: any) => boolean"
       }
     },
     "leftArrowIcon": {

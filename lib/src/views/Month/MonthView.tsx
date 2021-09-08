@@ -36,12 +36,12 @@ export const MonthSelection: React.FC<MonthSelectionProps> = ({
   date,
   onMonthChange,
   onChange,
-  shouldDisableMonth: shouldDisableMonthCallback
+  shouldDisableMonth: shouldDisableMonthCallback,
 }) => {
   const utils = useUtils();
   const classes = useStyles();
   const currentMonth = utils.getMonth(date);
-console.log('shouldDisableMonth',shouldDisableMonthCallback)
+
   const shouldDisableMonth = (month: MaterialUiPickersDate) => {
     const now = utils.date();
     const utilMinDate = utils.date(minDate);
@@ -57,7 +57,7 @@ console.log('shouldDisableMonth',shouldDisableMonthCallback)
 
     const isBeforeFirstEnabled = utils.isBefore(month, firstEnabledMonth);
     const isAfterLastEnabled = utils.isAfter(month, lastEnabledMonth);
-    const isShouldDisable = shouldDisableMonthCallback && shouldDisableMonthCallback(month)
+    const isShouldDisable = shouldDisableMonthCallback && shouldDisableMonthCallback(month);
 
     return isBeforeFirstEnabled || isAfterLastEnabled || isShouldDisable;
   };
