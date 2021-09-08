@@ -57,7 +57,7 @@ export const MonthSelection: React.FC<MonthSelectionProps> = ({
 
     const isBeforeFirstEnabled = utils.isBefore(month, firstEnabledMonth);
     const isAfterLastEnabled = utils.isAfter(month, lastEnabledMonth);
-    const isShouldDisable = shouldDisableMonthCallback && shouldDisableMonthCallback(month);
+    const isShouldDisable = !!(shouldDisableMonthCallback && shouldDisableMonthCallback(month));
 
     return isBeforeFirstEnabled || isAfterLastEnabled || isShouldDisable;
   };
